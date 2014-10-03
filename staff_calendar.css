@@ -29,3 +29,11 @@ a#submit-event.btn.btn-default:hover, a#submit-event.btn.btn-default:focus {
   background-color: #d43f3a;
   border-color: #cc0000;
 }
+
+.node-type-staff-calendar-event .region-sidebar-second {
+  text-align: center;
+}
+
+.node-type-staff-calendar-event .region-sidebar-second .btn.btn-default {
+  margin: 10px 0;
+}
