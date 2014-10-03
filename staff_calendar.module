@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Staff Calendar feature.
+ */
+
+include_once 'staff_calendar.features.inc';

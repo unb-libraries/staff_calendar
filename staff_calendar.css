@@ -1,0 +1,31 @@
+li.views-row a {
+    font-weight: bold;
+}
+li.views-row {
+    list-style: none;
+    margin: 10px 0;
+}
+.item-list ul {
+    padding: 0;
+}
+.view-footer {
+    border-top: 1px solid #c0c0c0;
+    padding-top: 10px;
+}
+.view-footer a {
+    margin: 5px 0;
+}
+.view-staff-calendar .date-nav-wrapper li.date-prev {
+    right: 75px;
+}
+a#submit-event.btn.btn-default {
+  background-color: #cc0000;
+  color: #fff;
+  font-size: 1.5em;
+  margin: 20px 0;
+  border-color: #ac2925;
+}
+a#submit-event.btn.btn-default:hover, a#submit-event.btn.btn-default:focus {
+  background-color: #d43f3a;
+  border-color: #cc0000;
+}
