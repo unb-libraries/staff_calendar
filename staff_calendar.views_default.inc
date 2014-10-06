@@ -35,11 +35,39 @@ function staff_calendar_views_default_views() {
   $handler->display->display_options['pager']['options']['date_id'] = 'month';
   $handler->display->display_options['style_plugin'] = 'calendar_style';
   $handler->display->display_options['style_options']['name_size'] = '3';
+  $handler->display->display_options['style_options']['mini'] = '0';
   $handler->display->display_options['style_options']['with_weekno'] = '0';
   $handler->display->display_options['style_options']['multiday_theme'] = '1';
   $handler->display->display_options['style_options']['theme_style'] = '1';
   $handler->display->display_options['style_options']['max_items'] = '0';
+  $handler->display->display_options['style_options']['multiday_hidden'] = array(
+    'field_event_date' => 'field_event_date',
+  );
   $handler->display->display_options['row_plugin'] = 'calendar_entity';
+  $handler->display->display_options['row_options']['colors']['legend'] = 'taxonomy';
+  $handler->display->display_options['row_options']['colors']['calendar_colors_type'] = array(
+    'library_banner_notice' => '#ffffff',
+    'book' => '#ffffff',
+    'incident_report' => '#ffffff',
+    'lcd_announcement' => '#ffffff',
+    'lcd_event' => '#ffffff',
+    'lcd_photo' => '#ffffff',
+    'library_hours' => '#ffffff',
+    'meeting_minutes' => '#ffffff',
+    'page' => '#ffffff',
+    'policies_procedures_and_forms' => '#ffffff',
+    'screensaver_message' => '#ffffff',
+    'short_url' => '#ffffff',
+    'staff_calendar_event' => '#ffffff',
+  );
+  $handler->display->display_options['row_options']['colors']['taxonomy_field'] = 'field_event_category';
+  $handler->display->display_options['row_options']['colors']['calendar_colors_vocabulary'] = array(
+    'field_event_category' => '4',
+  );
+  $handler->display->display_options['row_options']['colors']['calendar_colors_taxonomy'] = array(
+    21 => '#3650e2',
+    22 => '#d41f38',
+  );
   /* Footer: Global: Unfiltered text */
   $handler->display->display_options['footer']['area_text_custom']['id'] = 'area_text_custom';
   $handler->display->display_options['footer']['area_text_custom']['table'] = 'views';
@@ -70,6 +98,13 @@ function staff_calendar_views_default_views() {
   );
   $handler->display->display_options['fields']['field_event_date']['group_rows'] = FALSE;
   $handler->display->display_options['fields']['field_event_date']['delta_offset'] = '0';
+  /* Field: Content: Event Category */
+  $handler->display->display_options['fields']['field_event_category']['id'] = 'field_event_category';
+  $handler->display->display_options['fields']['field_event_category']['table'] = 'field_data_field_event_category';
+  $handler->display->display_options['fields']['field_event_category']['field'] = 'field_event_category';
+  $handler->display->display_options['fields']['field_event_category']['label'] = '';
+  $handler->display->display_options['fields']['field_event_category']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_event_category']['element_label_colon'] = FALSE;
   /* Sort criterion: Content: Event Date -  start date (field_event_date) */
   $handler->display->display_options['sorts']['field_event_date_value']['id'] = 'field_event_date_value';
   $handler->display->display_options['sorts']['field_event_date_value']['table'] = 'field_data_field_event_date';
@@ -88,19 +123,6 @@ function staff_calendar_views_default_views() {
   $handler->display->display_options['pager']['type'] = 'date_views_pager';
   $handler->display->display_options['pager']['options']['date_id'] = 'month';
   $handler->display->display_options['pager']['options']['link_format'] = 'clean';
-  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
-  $handler->display->display_options['style_plugin'] = 'calendar_style';
-  $handler->display->display_options['style_options']['name_size'] = '3';
-  $handler->display->display_options['style_options']['mini'] = '0';
-  $handler->display->display_options['style_options']['with_weekno'] = '0';
-  $handler->display->display_options['style_options']['multiday_theme'] = '1';
-  $handler->display->display_options['style_options']['theme_style'] = '1';
-  $handler->display->display_options['style_options']['max_items'] = '0';
-  $handler->display->display_options['defaults']['style_options'] = FALSE;
-  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
-  $handler->display->display_options['row_plugin'] = 'calendar_entity';
-  $handler->display->display_options['row_options']['colors']['legend'] = 'type';
-  $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   /* Contextual filter: Date: Date (node) */
   $handler->display->display_options['arguments']['date_argument']['id'] = 'date_argument';
@@ -137,9 +159,36 @@ function staff_calendar_views_default_views() {
   $handler->display->display_options['style_options']['multiday_theme'] = '1';
   $handler->display->display_options['style_options']['theme_style'] = '1';
   $handler->display->display_options['style_options']['max_items'] = '0';
+  $handler->display->display_options['style_options']['multiday_hidden'] = array(
+    'field_event_date' => 'field_event_date',
+  );
   $handler->display->display_options['defaults']['style_options'] = FALSE;
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['row_plugin'] = 'calendar_entity';
+  $handler->display->display_options['row_options']['colors']['legend'] = 'taxonomy';
+  $handler->display->display_options['row_options']['colors']['calendar_colors_type'] = array(
+    'library_banner_notice' => '#ffffff',
+    'book' => '#ffffff',
+    'incident_report' => '#ffffff',
+    'lcd_announcement' => '#ffffff',
+    'lcd_event' => '#ffffff',
+    'lcd_photo' => '#ffffff',
+    'library_hours' => '#ffffff',
+    'meeting_minutes' => '#ffffff',
+    'page' => '#ffffff',
+    'policies_procedures_and_forms' => '#ffffff',
+    'screensaver_message' => '#ffffff',
+    'short_url' => '#ffffff',
+    'staff_calendar_event' => '#ffffff',
+  );
+  $handler->display->display_options['row_options']['colors']['taxonomy_field'] = 'field_event_category';
+  $handler->display->display_options['row_options']['colors']['calendar_colors_vocabulary'] = array(
+    'field_event_category' => '4',
+  );
+  $handler->display->display_options['row_options']['colors']['calendar_colors_taxonomy'] = array(
+    21 => '#3650e2',
+    22 => '#d41f38',
+  );
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   /* Contextual filter: Date: Date (node) */
@@ -175,9 +224,36 @@ function staff_calendar_views_default_views() {
   $handler->display->display_options['style_options']['multiday_theme'] = '1';
   $handler->display->display_options['style_options']['theme_style'] = '1';
   $handler->display->display_options['style_options']['max_items'] = '0';
+  $handler->display->display_options['style_options']['multiday_hidden'] = array(
+    'field_event_date' => 'field_event_date',
+  );
   $handler->display->display_options['defaults']['style_options'] = FALSE;
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['row_plugin'] = 'calendar_entity';
+  $handler->display->display_options['row_options']['colors']['legend'] = 'taxonomy';
+  $handler->display->display_options['row_options']['colors']['calendar_colors_type'] = array(
+    'library_banner_notice' => '#ffffff',
+    'book' => '#ffffff',
+    'incident_report' => '#ffffff',
+    'lcd_announcement' => '#ffffff',
+    'lcd_event' => '#ffffff',
+    'lcd_photo' => '#ffffff',
+    'library_hours' => '#ffffff',
+    'meeting_minutes' => '#ffffff',
+    'page' => '#ffffff',
+    'policies_procedures_and_forms' => '#ffffff',
+    'screensaver_message' => '#ffffff',
+    'short_url' => '#ffffff',
+    'staff_calendar_event' => '#ffffff',
+  );
+  $handler->display->display_options['row_options']['colors']['taxonomy_field'] = 'field_event_category';
+  $handler->display->display_options['row_options']['colors']['calendar_colors_vocabulary'] = array(
+    'field_event_category' => '4',
+  );
+  $handler->display->display_options['row_options']['colors']['calendar_colors_taxonomy'] = array(
+    21 => '#3650e2',
+    22 => '#d41f38',
+  );
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   /* Contextual filter: Date: Date (node) */
