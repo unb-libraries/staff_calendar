@@ -92,8 +92,8 @@ function staff_calendar_field_default_field_instances() {
       'module' => 'date',
       'settings' => array(
         'increment' => 15,
-        'input_format' => 'm/d/Y - g:i:sa',
-        'input_format_custom' => '',
+        'input_format' => 'custom',
+        'input_format_custom' => 'Y-m-d g:i a',
         'label_position' => 'above',
         'text_parts' => array(),
         'year_range' => '-3:+3',
