@@ -36,3 +36,11 @@ a#submit-event.btn.btn-default:hover, a#submit-event.btn.btn-default:focus {
 .node-type-staff-calendar-event .region-sidebar-second .btn.btn-default {
   margin: 10px 0;
 }
+
+#block-system-main div.view-staff-calendar a, #block-system-main div.view-staff-calendar a:visited {
+  color: #000;
+}
+
+#block-system-main div.view-staff-calendar a:hover, #block-system-main div.view-staff-calendar a:focus {
+  color: #cc0000;
+}
