@@ -13,7 +13,7 @@ function staff_calendar_user_default_roles() {
   // Exported role: Staff Calendar Admin.
   $roles['Staff Calendar Admin'] = array(
     'name' => 'Staff Calendar Admin',
-    'weight' => 31,
+    'weight' => 36,
   );
 
   return $roles;

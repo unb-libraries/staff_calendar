@@ -46,7 +46,7 @@ function staff_calendar_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 31,
+      'weight' => 2,
     ),
   );
 
@@ -87,7 +87,7 @@ function staff_calendar_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
-      'weight' => 33,
+      'weight' => 5,
     ),
   );
 
@@ -133,15 +133,15 @@ function staff_calendar_field_default_field_instances() {
       'module' => 'date',
       'settings' => array(
         'display_all_day' => 1,
-        'increment' => 15,
-        'input_format' => 'custom',
-        'input_format_custom' => 'Y-m-d g:i a',
+        'increment' => 1,
+        'input_format' => 'Y/m/d - g:i:sa',
+        'input_format_custom' => '',
         'label_position' => 'above',
         'text_parts' => array(),
         'year_range' => '-3:+3',
       ),
-      'type' => 'date_text',
-      'weight' => 32,
+      'type' => 'date_popup',
+      'weight' => 3,
     ),
   );
 

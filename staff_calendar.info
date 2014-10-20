@@ -12,6 +12,7 @@ dependencies[] = date_api
 dependencies[] = date_views
 dependencies[] = features
 dependencies[] = node
+dependencies[] = options
 dependencies[] = taxonomy
 dependencies[] = text
 dependencies[] = views
