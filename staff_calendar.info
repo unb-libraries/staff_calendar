@@ -1,7 +1,6 @@
 name = Staff Calendar
 core = 7.x
 package = UNB Library
-version = 7.x-1.0
 project = staff_calendar
 dependencies[] = block
 dependencies[] = calendar
