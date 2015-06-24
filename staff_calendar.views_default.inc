@@ -72,6 +72,16 @@ function staff_calendar_views_default_views() {
   $handler->display->display_options['footer']['area_text_custom']['table'] = 'views';
   $handler->display->display_options['footer']['area_text_custom']['field'] = 'area_text_custom';
   $handler->display->display_options['footer']['area_text_custom']['content'] = '<a href="mailto:lbalcom@unb.ca?subject=Staff Calendar Event" class="btn btn-default" id="submit-event">Submit an Event</a>';
+  /* No results behavior: Global: Text area */
+  $handler->display->display_options['empty']['area']['id'] = 'area';
+  $handler->display->display_options['empty']['area']['table'] = 'views';
+  $handler->display->display_options['empty']['area']['field'] = 'area';
+  $handler->display->display_options['empty']['area']['empty'] = TRUE;
+  $handler->display->display_options['empty']['area']['content'] = '<p>No upcoming events are currently scheduled.</p>
+<div class="view-footer">
+  <a href="/staff-calendar/" class="btn btn-default">Browse calendar for past events</a><a href="mailto:lbalcom@unb.ca?subject=Staff Calendar Event" class="btn btn-default">Submit an event</a>
+</div>';
+  $handler->display->display_options['empty']['area']['format'] = 'extended_html_admin';
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
