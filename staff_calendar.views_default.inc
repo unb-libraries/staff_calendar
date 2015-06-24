@@ -438,16 +438,13 @@ function staff_calendar_views_default_views() {
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 0;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Date: Date (node) */
-  $handler->display->display_options['filters']['date_filter']['id'] = 'date_filter';
-  $handler->display->display_options['filters']['date_filter']['table'] = 'node';
-  $handler->display->display_options['filters']['date_filter']['field'] = 'date_filter';
-  $handler->display->display_options['filters']['date_filter']['operator'] = '>=';
-  $handler->display->display_options['filters']['date_filter']['default_date'] = 'now';
-  $handler->display->display_options['filters']['date_filter']['add_delta'] = 'yes';
-  $handler->display->display_options['filters']['date_filter']['date_fields'] = array(
-    'field_data_field_event_date.field_event_date_value' => 'field_data_field_event_date.field_event_date_value',
-  );
+  /* Filter criterion: Content: Event Date - end date (field_event_date:value2) */
+  $handler->display->display_options['filters']['field_event_date_value2']['id'] = 'field_event_date_value2';
+  $handler->display->display_options['filters']['field_event_date_value2']['table'] = 'field_data_field_event_date';
+  $handler->display->display_options['filters']['field_event_date_value2']['field'] = 'field_event_date_value2';
+  $handler->display->display_options['filters']['field_event_date_value2']['operator'] = '>=';
+  $handler->display->display_options['filters']['field_event_date_value2']['default_date'] = 'now';
+  $handler->display->display_options['filters']['field_event_date_value2']['year_range'] = '-0:+0';
   $export['staff_calendar'] = $view;
 
   return $export;
