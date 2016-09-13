@@ -402,7 +402,7 @@ function staff_calendar_views_default_views() {
   $handler->display->display_options['footer']['area_text_custom']['table'] = 'views';
   $handler->display->display_options['footer']['area_text_custom']['field'] = 'area_text_custom';
   $handler->display->display_options['footer']['area_text_custom']['content'] = '<a href="/staff-calendar/" class="btn btn-default">See full calendar</a>
-<a href="mailto:lbalcom@unb.ca?subject=Staff Calendar Event" class="btn btn-default">Submit an event</a>';
+<a href="mailto:pollockl@unb.ca?subject=Staff Calendar Event" class="btn btn-default">Submit an event</a>';
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
