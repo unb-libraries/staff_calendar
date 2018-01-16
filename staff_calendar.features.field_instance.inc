@@ -10,7 +10,7 @@
 function staff_calendar_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'node-staff_calendar_event-field_details'
+  // Exported field_instance: 'node-staff_calendar_event-field_details'.
   $field_instances['node-staff_calendar_event-field_details'] = array(
     'bundle' => 'staff_calendar_event',
     'default_value' => NULL,
@@ -50,7 +50,7 @@ function staff_calendar_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-staff_calendar_event-field_event_category'
+  // Exported field_instance: 'node-staff_calendar_event-field_event_category'.
   $field_instances['node-staff_calendar_event-field_event_category'] = array(
     'bundle' => 'staff_calendar_event',
     'default_value' => array(
@@ -91,7 +91,7 @@ function staff_calendar_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-staff_calendar_event-field_event_date'
+  // Exported field_instance: 'node-staff_calendar_event-field_event_date'.
   $field_instances['node-staff_calendar_event-field_event_date'] = array(
     'bundle' => 'staff_calendar_event',
     'deleted' => 0,
@@ -106,6 +106,7 @@ function staff_calendar_field_default_field_instances() {
           'multiple_from' => '',
           'multiple_number' => '',
           'multiple_to' => '',
+          'show_remaining_days' => FALSE,
         ),
         'type' => 'date_default',
         'weight' => 0,

@@ -15,6 +15,7 @@ function staff_calendar_user_default_permissions() {
     'name' => 'create staff_calendar_event content',
     'roles' => array(
       'Staff Calendar Admin' => 'Staff Calendar Admin',
+      'administrator' => 'administrator',
     ),
     'module' => 'node',
   );
@@ -24,6 +25,7 @@ function staff_calendar_user_default_permissions() {
     'name' => 'delete any staff_calendar_event content',
     'roles' => array(
       'Staff Calendar Admin' => 'Staff Calendar Admin',
+      'administrator' => 'administrator',
     ),
     'module' => 'node',
   );
@@ -33,6 +35,7 @@ function staff_calendar_user_default_permissions() {
     'name' => 'delete own staff_calendar_event content',
     'roles' => array(
       'Staff Calendar Admin' => 'Staff Calendar Admin',
+      'administrator' => 'administrator',
     ),
     'module' => 'node',
   );
@@ -42,6 +45,7 @@ function staff_calendar_user_default_permissions() {
     'name' => 'edit any staff_calendar_event content',
     'roles' => array(
       'Staff Calendar Admin' => 'Staff Calendar Admin',
+      'administrator' => 'administrator',
     ),
     'module' => 'node',
   );
@@ -51,6 +55,7 @@ function staff_calendar_user_default_permissions() {
     'name' => 'edit own staff_calendar_event content',
     'roles' => array(
       'Staff Calendar Admin' => 'Staff Calendar Admin',
+      'administrator' => 'administrator',
     ),
     'module' => 'node',
   );
